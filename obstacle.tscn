@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://obstacle.gd" type="Script" id=1]
+[ext_resource path="res://tortoise1.png" type="Texture" id=2]
+
+[node name="obstacle" type="Area2D"]
+position = Vector2( 716, 328 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sprite" type="Sprite" parent="."]
+rotation = 3.14159
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -42.345, -78.036, -26.345, -56.036, 1.65497, -64.036, 21.655, -56.036, 37.655, -74.036, 51.655, -66.036, 35.655, -36.036, 43.655, -10.036, 41.655, 7.96402, 55.655, 31.964, 45.655, 45.964, 37.655, 27.964, 21.655, 37.964, 21.655, 69.964, -6.34503, 75.964, -24.345, 61.964, -20.345, 37.964, -34.345, 29.964, -42.345, 51.964, -58.345, 39.964, -42.345, 11.964, -46.345, -18.036, -38.345, -42.036, -54.345, -66.036 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="area_entered" from="." to="." method="_on_obstacle_area_entered"]

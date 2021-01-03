@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tortoise2.png" type="Texture" id=1]
+[ext_resource path="res://player.gd" type="Script" id=2]
+
+[node name="player" type="Area2D"]
+position = Vector2( 502, 314 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_lock_": true
+}
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( -1.08069, 1.51367 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 2.27112, -78.8793, 21.2985, -59.852, 11.7848, -38.4463, 59.353, -33.6895, 76.002, -19.4189, 33.1906, -17.0406, 49.8395, 9.12201, 45.0826, 32.9061, 66.4883, 66.2039, 42.7042, 70.9608, 26.0553, 54.3119, 7.02795, 68.5823, -26.2698, 56.6903, -64.3245, 73.3392, -64.3245, 51.9335, -42.9187, 35.2845, -54.8108, 13.8788, -40.5403, -14.6621, -76.2166, -19.4189, -54.8108, -36.0679, -23.8914, -38.4463, -19.1341, -64.6089 )
+__meta__ = {
+"_edit_lock_": true
+}
